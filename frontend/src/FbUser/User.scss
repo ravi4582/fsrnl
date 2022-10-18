@@ -1,0 +1,61 @@
+// .fb-user .font-size{
+//     font-size: x-large !important;
+// }
+
+// .fb-user .card-body{
+//     height: 200px;
+// }
+
+// @media only screen and (min-width: 991px ){
+//     .font-size{
+//         font-size: xx-large !important;
+//     }
+
+// }
+
+// sass mixin
+
+@mixin reset-list {
+    margin: 0;
+    padding: 5px;
+    list-style: none;
+  }
+  @mixin horizontal-list {
+    @include reset-list;
+  
+    li {
+      display: inline-block;
+      margin: {
+        left: -2px;
+        right: 2em;
+      }
+    }
+  }
+
+.fb-user{
+    $height:200px;
+    & .card-body{
+        height: $height;
+        background-color: #c4daff21;
+        &__user{
+            display: flex;
+            flex-direction: column;
+            &-font-name{
+                font-size: 20px;
+            }
+            &-font-btn{
+                font-size: 15px;
+                margin-top: 25%;
+            }
+        }
+    }
+
+    // .fb-user.test123{
+    
+    // }
+    &.test123{
+
+    }
+}
+
+
